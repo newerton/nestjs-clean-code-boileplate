@@ -1,6 +1,5 @@
-import { Module } from '@nestjs/common';
-
 import { ExampleTypeORMRepository } from '@app/@common/infrastructure/persistence/database/typeorm/repository/example-typeorm.repository';
+import { Module } from '@nestjs/common';
 
 import {
   CreateExampleController,

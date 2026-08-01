@@ -1,3 +1,5 @@
+import { ErrorSchema } from '@app/@common/application/documentations/openapi/swagger/error.schema';
+import { JoiValidationPipe } from '@app/@common/application/pipes/joi-validation.pipe';
 import { HttpStatus } from '@nestjs/common';
 import { Body, Controller, HttpCode, Post } from '@nestjs/common/decorators';
 import {
@@ -7,9 +9,6 @@ import {
   ApiTags,
   ApiUnprocessableEntityResponse,
 } from '@nestjs/swagger';
-
-import { ErrorSchema } from '@app/@common/application/documentations/openapi/swagger/error.schema';
-import { JoiValidationPipe } from '@app/@common/application/pipes/joi-validation.pipe';
 
 import { CreateExampleInput } from '../dto';
 import { CreateExampleUseCase } from '../use-cases';

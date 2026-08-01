@@ -29,7 +29,7 @@ describe('ExampleTypeORMRepository', () => {
           },
           create: jest.fn(() => payload),
           save: jest.fn(() => true),
-        } as any),
+        }) as any,
     );
 
     const repository = new ExampleTypeORMRepository(dataSource);

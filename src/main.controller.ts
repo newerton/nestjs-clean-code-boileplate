@@ -1,7 +1,6 @@
+import { ErrorSchema } from '@app/@common/application/documentations/openapi/swagger/error.schema';
 import { Controller, Get, HttpCode, HttpStatus } from '@nestjs/common';
 import { ApiBadRequestResponse, ApiResponse } from '@nestjs/swagger';
-
-import { ErrorSchema } from '@app/@common/application/documentations/openapi/swagger/error.schema';
 
 @Controller({
   version: '1',

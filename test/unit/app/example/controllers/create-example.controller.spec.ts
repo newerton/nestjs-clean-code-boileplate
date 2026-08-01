@@ -1,10 +1,9 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { DataSource } from 'typeorm';
-
 import { ExampleTypeORMRepository } from '@app/@common/infrastructure/persistence/database/typeorm/repository/example-typeorm.repository';
 import { CreateExampleController } from '@app/example/controllers';
 import { CreateExampleInput } from '@app/example/dto';
 import { CreateExampleUseCase } from '@app/example/use-cases';
+import { Test, TestingModule } from '@nestjs/testing';
+import { DataSource } from 'typeorm';
 
 const dataSourceMock = jest.fn(() => ({
   createEntityManager(): any {

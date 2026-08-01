@@ -1,3 +1,4 @@
+import { CreateSchema } from '@app/@common/application/validators/joi/schemas/joi.create-schema.interface';
 import {
   HttpException,
   HttpStatus,
@@ -5,8 +6,6 @@ import {
   PipeTransform,
 } from '@nestjs/common';
 import * as JoiBase from 'joi';
-
-import { CreateSchema } from '@app/@common/application/validators/joi/schemas/joi.create-schema.interface';
 
 export type ValidationType = {
   message: string;
@@ -17,7 +16,7 @@ export type ValidationType = {
 export class JoiValidationPipe implements PipeTransform {
   private readonly schema: JoiBase.AnySchema;
 
-  constructor(private schemaFactory: CreateSchema) {
+  constructor(schemaFactory: CreateSchema) {
     this.schema = schemaFactory.createSchema();
   }
 

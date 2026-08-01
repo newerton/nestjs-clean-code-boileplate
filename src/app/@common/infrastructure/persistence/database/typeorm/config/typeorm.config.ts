@@ -1,10 +1,8 @@
-import * as path from 'path';
-
-import * as dotenv from 'dotenv';
-import { DataSource, DataSourceOptions } from 'typeorm';
-
+import * as path from 'node:path';
 import { ApiServerConfig } from '@core/@shared/infrastructure/config/env/api-server.config';
 import { DatabaseServerConfig } from '@core/@shared/infrastructure/config/env/database-server.config';
+import * as dotenv from 'dotenv';
+import { DataSource, DataSourceOptions } from 'typeorm';
 
 dotenv.config();
 
@@ -18,7 +16,7 @@ const defaultConfig: DataSourceOptions = {
   logging: DatabaseServerConfig.DB_LOGGING,
   charset: 'utf8mb4_unicode_ci',
   entities: [
-    path.normalize(__dirname + `/../../typeorm/entities/*.entity{.ts,.js}`),
+    path.normalize(`${__dirname}/../../typeorm/entities/*.entity{.ts,.js}`),
   ],
 };
 

@@ -1,3 +1,7 @@
+import { CoreApiResponse } from '@core/@shared/domain/api/CoreApiResponse';
+import { Code, CodeDescription } from '@core/@shared/domain/error/Code';
+import { Exception } from '@core/@shared/domain/exception/Exception';
+import { ApiServerConfig } from '@core/@shared/infrastructure/config/env/api-server.config';
 import {
   ArgumentsHost,
   Catch,
@@ -7,11 +11,6 @@ import {
   UnauthorizedException,
 } from '@nestjs/common';
 import { Request, Response } from 'express';
-
-import { CoreApiResponse } from '@core/@shared/domain/api/CoreApiResponse';
-import { Code, CodeDescription } from '@core/@shared/domain/error/Code';
-import { Exception } from '@core/@shared/domain/exception/Exception';
-import { ApiServerConfig } from '@core/@shared/infrastructure/config/env/api-server.config';
 
 type HttpExceptionFilterProperties = Error &
   CodeDescription & {
@@ -51,8 +50,8 @@ export class HttpExceptionFilter implements ExceptionFilter {
       errorResponse.code > 999
         ? 400
         : errorResponse.code < 100
-        ? 500
-        : errorResponse.code;
+          ? 500
+          : errorResponse.code;
 
     response.status(status).json(errorResponse);
   }

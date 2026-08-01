@@ -1,3 +1,5 @@
+import { ErrorSchema } from '@app/@common/application/documentations/openapi/swagger/error.schema';
+import { ExampleTypeORM } from '@app/@common/infrastructure/persistence/database/typeorm/entities/example-typeorm.entity';
 import { HttpStatus } from '@nestjs/common';
 import { Controller, Get, HttpCode } from '@nestjs/common/decorators';
 import {
@@ -6,9 +8,6 @@ import {
   ApiTags,
   ApiUnprocessableEntityResponse,
 } from '@nestjs/swagger';
-
-import { ErrorSchema } from '@app/@common/application/documentations/openapi/swagger/error.schema';
-import { ExampleTypeORM } from '@app/@common/infrastructure/persistence/database/typeorm/entities/example-typeorm.entity';
 
 import { ListAllExampleUseCase } from '../use-cases';
 

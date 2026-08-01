@@ -1,10 +1,9 @@
 import 'dotenv/config';
 
-import { Logger } from '@nestjs/common';
-import { NestFactory } from '@nestjs/core';
-
 import { applySwagger } from '@app/@common/application/config/swagger.config';
 import { ApiServerConfig } from '@core/@shared/infrastructure/config/env/api-server.config';
+import { Logger } from '@nestjs/common';
+import { NestFactory } from '@nestjs/core';
 
 import { MainModule } from './main.module';
 

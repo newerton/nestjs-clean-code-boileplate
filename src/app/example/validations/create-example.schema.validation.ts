@@ -1,7 +1,6 @@
-import * as JoiBase from 'joi';
-
 import { CreateSchema } from '@app/@common/application/validators/joi/schemas/joi.create-schema.interface';
 import joiMessagesSchema from '@app/@common/application/validators/joi/schemas/joi.messages.schema';
+import * as JoiBase from 'joi';
 
 const Joi = JoiBase;
 

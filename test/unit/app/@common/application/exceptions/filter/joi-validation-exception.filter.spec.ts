@@ -1,11 +1,10 @@
-import { HttpStatus } from '@nestjs/common';
-import { Test, TestingModule } from '@nestjs/testing';
-
 import { JoiValidationExceptionFilter } from '@app/@common/application/exceptions/filter/joi-validation-exception.filter';
 import {
   JoiValidationException,
   ValidationType,
 } from '@app/@common/application/pipes/joi-validation.pipe';
+import { HttpStatus } from '@nestjs/common';
+import { Test, TestingModule } from '@nestjs/testing';
 
 const mockJson = jest.fn();
 const mockStatus = jest.fn().mockImplementation(() => ({

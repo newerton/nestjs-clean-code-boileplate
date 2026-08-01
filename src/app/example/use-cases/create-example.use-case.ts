@@ -1,6 +1,5 @@
-import { Injectable } from '@nestjs/common';
-
 import { ExampleTypeORMRepository } from '@app/@common/infrastructure/persistence/database/typeorm/repository/example-typeorm.repository';
+import { Injectable } from '@nestjs/common';
 
 import { CreateExampleInput } from '../dto';
 
